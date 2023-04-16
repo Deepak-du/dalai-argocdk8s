@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dalai-deployment
+  labels:
+    app: dalai
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: dalai
+  template:
+    metadata:
+      labels:
+        app: dalai
+    spec:
+      containers:
+        - name: dalai
+          image: deepakdu/dalai
+          ports:
+            - containerPort: 3000
