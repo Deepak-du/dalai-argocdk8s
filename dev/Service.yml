@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: dalai-service
+  name: frontend
   labels:
-    app: dalai
+    app: frontend
 spec:
   type: NodePort
   ports:
